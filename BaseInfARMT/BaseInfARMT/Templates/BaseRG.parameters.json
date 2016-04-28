@@ -1,0 +1,15 @@
+﻿{
+    "adminUsername": {
+        "value": "Dave"
+    },
+    "dnsNameForPublicIP": {
+        "value": "elvis45xxx"
+    },
+    "baseUrl": {
+        "value": "https://ictleeds.visualstudio.com/DefaultCollection/Azure4DevTestPilot"
+    },
+    "adminPassword": {
+        "value": "Password01!"
+    }
+
+}
