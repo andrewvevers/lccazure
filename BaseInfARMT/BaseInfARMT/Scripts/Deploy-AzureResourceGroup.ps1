@@ -3,7 +3,7 @@
 #Requires -Module Azure.Storage
 
 Param(
-    [string] [Parameter(Mandatory=$true)] $ResourceGroupLocation,
+    [string] $ResourceGroupLocation = "westeurope",
     [string] $ResourceGroupName = 'BaseInfARMT',
     [switch] $UploadArtifacts,
     [string] $StorageAccountName,
