@@ -75,8 +75,13 @@
     "wadcfgxstart": "[concat(variables('wadlogs'), variables('wadperfcounters1'), variables('wadperfcounters2'), '<Metrics resourceId=\"')]",
     "wadmetricsresourceid": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', variables('diagnosticsStorageAccountResourceGroup'), '/providers/', 'Microsoft.Compute/virtualMachines/', variables('vmName'))]",
     "wadcfgxend": "\\\"><MetricAggregation scheduledTransferPeriod=\\\"PT1H\\\"/><MetricAggregation scheduledTransferPeriod=\\\"PT1M\\\"/></Metrics></DiagnosticMonitorConfiguration></WadCfg>,",
-    "vnetSetupURL": "[concat(parameters('baseUrl'),'/vnet.json')]",
-    "dcSetupURL": "[concat(parameters('baseUrl'),'/devdc.json')]"
+    "vnetSetupURL": "[concat(parameters('baseUrl'),'/VNet.json')]",
+    "dcSetupURL": "[concat(parameters('baseUrl'),'/DevDC.json')]",
+    "dcSetupParamURL": "[concat(parameters('baseUrl'),'/DevDC.parameters.json')]",
+    "vnetSetupParamURL": "[concat(parameters('baseUrl'),'/DevDC.parameters.json')]"
+
+
+
   },
   "resources": [
 
@@ -91,21 +96,24 @@
         "templateLink": {
           "uri": "[variables('vnetSetupURL')]",
           "contentVersion": "1.0.0.0"
-        }
+        },
+        "parametersLink": "[variables('vnetSetupParamURL')]"
+
       }
       },
-        {
-          "name": "SettingUpDC",
-          "type": "Microsoft.Resources/deployments",
-          "apiVersion": "2015-01-01",
-          "properties": {
-            "mode": "Incremental",
-            "templateLink": {
-              "uri": "[variables('dcSetupURL')]",
-              "contentVersion": "1.0.0.0"
-            }
-          }
-            },
+        //{
+        //  "name": "SettingUpDC",
+        //  "type": "Microsoft.Resources/deployments",
+        //  "apiVersion": "2015-01-01",
+        //  "properties": {
+        //    "mode": "Incremental",
+        //    "templateLink": {
+        //      "uri": "[variables('dcSetupURL')]",
+        //      "contentVersion": "1.0.0.0"
+        //    },
+        //    "parametersLink": "[variables('dcSetupParamURL')]"
+        //  }
+        //    },
 
 
 

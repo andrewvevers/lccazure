@@ -6,7 +6,7 @@
         "value": "elvis45xxx"
     },
     "baseUrl": {
-        "value": "https://ictleeds.visualstudio.com/DefaultCollection/Azure4DevTestPilot"
+        "value": "https://raw.githubusercontent.com/andrewvevers/lccazure/master/BaseInfARMT/BaseInfARMT/Templates"
     },
     "adminPassword": {
         "value": "Password01!"
