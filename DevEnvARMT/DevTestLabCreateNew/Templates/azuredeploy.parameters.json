@@ -1,0 +1,27 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "newLabName": {
+      "value": "SecondLab"
+    },
+    "labVmShutDownTime": {
+      "value": "18:00"
+    },
+    "maxAllowedVmsPerUser": {
+      "value": 5
+    },
+    "maxAllowedVmsPerLab": {
+      "value": 10
+    },
+    "allowedVmSizes": {
+      "value": "\"Standard_A2\", \"Standard_A4\""
+    },
+      "existingVirtualNetworkId": {
+          "value": "/subscriptions/cdad676a-c3cd-46a5-9fba-b5f9ebb972e2/resourceGroups/TestDTLresourcegroup/providers/Microsoft.Network/virtualNetworks/DtlMyLab1"
+      },
+      "existingSubnetName": {
+          "value": "DtlMyLab1Subnet"
+      }
+  }
+}
