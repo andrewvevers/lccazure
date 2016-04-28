@@ -74,7 +74,7 @@
     "vnetSetupURL": "[concat(parameters('baseUrl'),'/VNet.json')]",
     "dcSetupURL": "[concat(parameters('baseUrl'),'/DevDC.json')]",
     "dcSetupParamURL": "[concat(parameters('baseUrl'),'/DevDC.parameters.json')]",
-    "vnetSetupParamURL": "[concat(parameters('baseUrl'),'/DevDC.parameters.json')]"
+    "vnetSetupParamURL": "[concat(parameters('baseUrl'),'/VNet.parameters.json')]"
 
 
 
@@ -101,6 +101,26 @@
 
 
       }
+    },
+
+    {
+      "name": "SettingUpDC",
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2015-01-01",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "[variables('dcSetupURL')]",
+          "contentVersion": "1.0.0.0"
+        },
+
+        "parametersLink": {
+          "uri": "[variables('dcSetupParamURL')]",
+          "contentVersion": "1.0.0.0"
+        }
+
+
       }
-            ]
-          }
+    }
+  ]
+}

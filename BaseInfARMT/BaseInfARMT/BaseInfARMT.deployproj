@@ -36,6 +36,7 @@
     <Content Include="Templates\BaseRG.parameters.json" />
     <Content Include="Templates\BaseRG.json" />
     <Content Include="Templates\VNet.parameters.json" />
+    <None Include="Templates\CreateADPDC.ps1.zip" />
     <None Include="Templates\DevDC.parameters.json" />
     <None Include="Templates\DevDC.json" />
     <None Include="Templates\VNet.json" />
