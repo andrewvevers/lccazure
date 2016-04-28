@@ -1,0 +1,54 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "West US"
+        },
+        "storageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "adminUsername": {
+            "value": "admin123"
+        },
+        "adminPassword": {
+            "value": "Password01"
+        },
+        "sqlServerServiceAccountUserName": {
+            "value": "admin123sql"
+        },
+        "sqlServerServiceAccountPassword": {
+            "value": "Password01"
+        },
+        "sharePointSetupUserAccountUserName": {
+            "value": "admin123sp"
+        },
+        "sharePointSetupUserAccountPassword": {
+            "value": "Password01"
+        },
+        "sharePointFarmAccountPassword": {
+            "value": "Password01"
+        },
+        "sharePointFarmPassphrasePassword": {
+            "value": "Password01"
+        },
+        "sppublicIPAddressName": {
+            "value": "sppublicIP"
+        },
+        "spDNSPrefix": {
+            "value": "Testymctestyspfarm"
+        },
+        "storageAccountNamePrefix": {
+            "value": "GEN-Testymctestyspfarm"
+        },
+         "adVMSize": {
+            "value": "Standard_DS1"
+        },
+        "sqlVMSize": {
+            "value": "Standard_DS3"
+        },
+        "spVMSize": {
+            "value": "Standard_DS3"
+        }
+    }
+}
